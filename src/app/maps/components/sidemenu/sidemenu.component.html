@@ -1,0 +1,60 @@
+  
+<div class="mx-auto bg-white">
+    <aside class="group/sidebar shrink-0 grow" id="sidenav-main">
+
+
+        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+
+        <div class="flex items-center justify-between px-8 py-5
+        shadow-sm">
+            <div class="flex items-center mr-5">
+            <div class="mr-2 ">
+                <h2 class="dark:hover:text-primary hover:text-primary transition-colors duration-200 ease-in-out text-[1.075rem] font-medium dark:text-neutral-400/90 text-secondary-inverse">Mapas App</h2>
+                <span class="text-secondary-dark dark:text-stone-500 font-medium block text-[0.85rem]">Mapbox</span>
+            </div>
+            
+            </div>
+        </div>
+
+        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+
+        <div class="relative pl-3 my-5 overflow-auto">
+            <div class="flex flex-col w-full font-medium">
+              <!-- MenuSideBar -->
+              @for (item of menuItem; track $index) {
+              <div 
+              routerLinkActive="text-blue-600 bg-gray-100 " 
+              [routerLink]="item.router" 
+              class="flex rounded-xl p-2  hover:cursor-pointer">
+                <div class="flex-none hover:cursor-pointer">
+                  <a href="#" class="group relative ">
+                    <span class="material-symbols-outlined">
+                      {{item.icon}}
+                    </span>
+                    <div class="absolute inset-y-0 left-12 hidden items-center group-hover:flex">
+                      <div class="relative whitespace-nowrap rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 drop-shadow-lg">
+                        <div class="absolute inset-0 -left-1 flex items-center">
+                          <div class="h-2 w-2 rotate-45 bg-white"></div>
+                        </div>
+                        Layouts <span class="text-gray-400">(Y)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                
+              <a 
+             
+              class="flex flex-grow text-[1rem] px-2 ">
+                {{item.name}}
+              </a>
+                
+                
+              </div>
+
+            }
+
+      </div>
+    </div>
+  </aside>
+</div>
+        
