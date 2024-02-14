@@ -16,7 +16,7 @@ export class ZoompageComponent implements OnDestroy {
 
   public zoom = signal<number>(5);
   public map? : Map;
-  public lngLat? : LngLat = new LngLat(-74.5, 40);
+  public lngLat? : LngLat = new LngLat( -3.31, 40.66);
 
   ngAfterViewInit(): void {
     this.map = new Map({
